@@ -9,8 +9,6 @@ class GerirPessoasController extends Controller
 {
     public function GerirPessoas()
     {
-        $pessoas = Http::get('http://localhost:8000/api/pessoas/getPessoas');
-        echo '<script>alert("'.$pessoas.'")</script>';
-            return view('GerirPessoas', ['pessoas' => $pessoas]);
+        return view('GerirPessoas');
     }
 }

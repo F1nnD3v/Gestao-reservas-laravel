@@ -25,7 +25,7 @@
             <th scope="col">Tipo</th>
         </tr>
            <tr>
-               {{$pessoas}}
+{{--               {{$pessoas}}--}}
 {{--                @foreach($pessoas as $pessoa)
                 <td>{{$pessoa->nome}}</td>
                 <td>{{$pessoa->email}}</td>

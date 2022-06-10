@@ -12,9 +12,9 @@ Route::get('/pessoas/getPessoas', function () {
 });
 
 //Get a pessoa from database
-Route::get('/pessoas/getPessoa/{id}', function ($id) {
+/*Route::get('/pessoas/getPessoa/{id}', function ($id) {
     return Pessoa::find($id);
-});
+});*/
 
 //Add new pessoa to database
 Route::post('/pessoas/addPessoa', function () {

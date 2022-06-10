@@ -3,14 +3,34 @@
 @section('title', 'Gestão de reservas')
 
 @section('content')
-    <div>
-        <div style="margin: auto;">
+    <style>
+        .divBtns{
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            gap: 1rem;
+            margin-top: 15rem;
+        }
+
+        .button{
+            margin: auto;
+        }
+
+        button{
+            border-radius: .5rem;
+            padding: 1rem;
+            padding-bottom: .5rem;
+            padding-top: .5rem;
+        }
+    </style>
+    <div class="divBtns">
+        <div class="button">
             <a href="{{url('/GerirPessoas')}}"><button style="margin: auto">Gerir pessoas</button></a>
         </div>
-        <div>
+        <div class="button">
             <a><button>Gerir casas</button></a>
         </div>
-        <div>
+        <div class="button">
             <button>Gerir reservas</button>
         </div>
     </div>
