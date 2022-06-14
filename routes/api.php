@@ -7,7 +7,7 @@ use Illuminate\Support\Facades\Route;
 
 // ------------------Pessoas api requests------------------
 //Get all pessoas from database
-Route::get('/pessoas/getPessoas', function () {
+Route::get('/getPessoas', function () {
     return Pessoa::all();
 });
 
