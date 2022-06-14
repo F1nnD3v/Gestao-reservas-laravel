@@ -14,20 +14,20 @@ return new class extends Migration
     public function up()
     {
         Schema::create('tipos', function (Blueprint $table) {
-            $table->id('id_tipo');
+            $table->id();
             $table->string('tipo');
         });
 
         DB::table('tipos')->insert(
             array(
-                'id_tipo' => 1,
+                'id' => 1,
                 'tipo' => 'Cliente'
             )
         );
 
         DB::table('tipos')->insert(
             array(
-                'id_tipo' => 2,
+                'id' => 2,
                 'tipo' => 'Proprietário'
             )
         );

@@ -19,24 +19,29 @@
         <tr>
             <th scope="col">Nome</th>
             <th scope="col">Email</th>
+            <th scope="col">Idade</th>
             <th scope="col">Telefone</th>
-            <th scope="col">Morada</th>
             <th scope="col">NIF</th>
             <th scope="col">Tipo</th>
         </tr>
-           <tr>
-{{--               {{$pessoas}}--}}
-{{--                @foreach($pessoas as $pessoa)
-                <td>{{$pessoa->nome}}</td>
+                @foreach($pessoas as $pessoa)
+               <tr>
+               <td>{{$pessoa->nome}}</td>
                 <td>{{$pessoa->email}}</td>
+               <td>{{$pessoa->idade}}</td>
                 <td>{{$pessoa->telefone}}</td>
-                <td>{{$pessoa->morada}}</td>
                 <td>{{$pessoa->nif}}</td>
-                <td>{{$pessoa->tipo}}</td>
-                <td><a href="{{route('pessoas.edit', $pessoa->id)}}">Editar</a></td>
-                <td><a href="{{route('pessoas.destroy', $pessoa->id)}}">Eliminar</a></td>
-                @endforeach--}}
+                <td>{{$pessoa->tipo['tipo']}}</td>
+                <td>
+                    <a href="{{url('/EditarPessoa', $pessoa->id)}}">
+                        <button>
+                            <span class="oi oi-pencil" data-glyph="pencil"></span>
+                        </button>
+                    </a>
+                </td>
+                <td><a>Eliminar</a></td>
            </tr>
+                @endforeach
     </table>
    </div>
 @endsection

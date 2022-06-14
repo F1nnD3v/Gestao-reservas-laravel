@@ -4,11 +4,12 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Http;
+use App\Models\Pessoa;
 
 class GerirPessoasController extends Controller
 {
-    public function GerirPessoas()
+    public function index()
     {
-        return view('GerirPessoas');
+        return Pessoa::all();
     }
 }

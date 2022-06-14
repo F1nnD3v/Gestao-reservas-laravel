@@ -1,15 +1,19 @@
 <?php
 
+use App\Http\Controllers\GerirPessoasController;
+use Illuminate\Support\Facades\Http;
+use Illuminate\Support\Facades\Route;
+use GuzzleHttp\Client;
+
 use App\Models\Pessoa;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Route;
 
 
 // ------------------Pessoas api requests------------------
-//Get all pessoas from database
-Route::get('/getPessoas', function () {
-    return Pessoa::all();
-});
+
+Route::GET('/pessoas', [GerirPessoasController::class, 'index']);
+
+
 
 //Get a pessoa from database
 /*Route::get('/pessoas/getPessoa/{id}', function ($id) {
