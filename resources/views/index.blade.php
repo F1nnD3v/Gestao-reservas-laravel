@@ -28,7 +28,7 @@
             <a href="{{url('/GerirPessoas')}}"><button style="margin: auto">Gerir pessoas</button></a>
         </div>
         <div class="button">
-            <a><button>Gerir casas</button></a>
+            <a href="{{url('/GerirCasas')}}"><button>Gerir casas</button></a>
         </div>
         <div class="button">
             <button>Gerir reservas</button>

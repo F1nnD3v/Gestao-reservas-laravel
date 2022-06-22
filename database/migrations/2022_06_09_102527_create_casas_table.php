@@ -14,7 +14,7 @@ return new class extends Migration
     public function up()
     {
         Schema::create('casas', function (Blueprint $table) {
-            $table->id('id_casa');
+            $table->id();
             $table->string('nome');
             $table->string('morada');
             $table->string('numero');
@@ -22,6 +22,7 @@ return new class extends Migration
             $table->string('localidade');
             $table->string('distrito');
             $table->string('pais');
+            $table->integer('id_dono');
             $table->timestamps();
         });
     }

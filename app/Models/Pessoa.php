@@ -27,4 +27,9 @@ class Pessoa extends Model
     {
         return $this->hasMany('App\Models\Reserva', 'id_cliente');
     }
+
+    public function casas()
+    {
+        return $this->hasMany('App\Models\Casa', 'id_dono');
+    }
 }
